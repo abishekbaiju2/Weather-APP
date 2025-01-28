@@ -13,25 +13,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <style>
-            body{
-                background-image: url('../static/images/bg.jpg');
-            }
-        </style>
+    <style>
+        body {
+            background-image: url('../static/images/bg.jpg');
+        }
+    </style>
 </head>
+
 <body>
-    <div class="container w-50 mt-5 pt-5 text-white">
-        <div class="card-body">
-            <h4 class="card-title font-weight-bold text-center mt-3"><b>WEATHER</b> <i class="fa-solid fa-cloud"></i>
-            </h4>
-            <form action="" method="post">
-                {%csrf_token%}
-                <div class="input-group flex-nowrap">
-                    <input type="text" class="form-control mt-3" name="city" placeholder="Enter city name" required>
-                    <button class="btn btn-primary mt-3" type="submit">Get Weather</button>
-                </div>
-            </form>
-        </div>
+    <div class="container w-25 mt-5 pt-5 text-white">
+        <h4 class="card-title font-weight-bold text-center mt-3"><b>WEATHER</b> <i class="fa-solid fa-cloud"></i>
+        </h4>
+        <form action="" method="post">
+            {%csrf_token%}
+            <div class="input-group flex-nowrap">
+                <input type="text" class="form-control  mt-3" name="city" placeholder="Enter city name" required>
+                <button class="btn btn-primary mt-3" type="submit">Get Weather</button>
+            </div>
+        </form>
         {%if weather%}
         {%if weather.error%}
         <div class="alert alert-danger">{{weather.error}} <i class="fa-solid fa-circle-exclamation"></i></div>
@@ -48,4 +47,5 @@
         {%endif%}
     </div>
 </body>
+
 </html>
