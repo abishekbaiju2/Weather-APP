@@ -18,7 +18,7 @@
             height: 100vh;
             width: 100vw;
             overflow: hidden;
-            background-image: url('../static/images/bg.jpg');
+            background-image: url('../static/images/bg1.jpg');
             background-size: 100% 100%;
         }
     
@@ -42,11 +42,13 @@
         {%else%}
         <div class=" text-center mt-4">
             <h2><b>{{weather.city}}</b></h2>
-            <h4>{{weather.temperature}}°C</h4>
-            <p>{{weather.description|capfirst}}</p>
-            <p>Humidity: {{ weather.humidity}} %</p>
-            <p>Pressure: {{ weather.pressure}} hPa</p>
-            <p>Wind Speed: {{weather.wind}} m/s</p>
+            <h4><b>{{weather.temperature}}°C</b></h4>
+            <h6>
+                <p>{{weather.description|capfirst}}</p>
+                <p>Humidity: {{ weather.humidity}} %</p>
+                <p>Pressure: {{ weather.pressure}} hPa</p>
+                <p>Wind Speed: {{weather.wind}} m/s</p>
+            </h6>
         </div>
         {%endif%}
         {%endif%}
